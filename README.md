@@ -6,7 +6,7 @@ A modern fitness tracking mobile application built with Flutter, implementing Cl
 
 ## App Screenshots
 
-[View Screenshots](https://github.com/FahadMehmood056/fitness_app/tree/main/screenshots)
+[View Screenshots](https://github.com/FahadMehmood056/fitness_app/tree/master/screenshots)
 
 ---
 
