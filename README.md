@@ -28,7 +28,7 @@ A modern fitness tracking mobile application built with Flutter, implementing Cl
 
 ## Download APK
 
-[Download APK](https://github.com/FahadMehmood056/fitness_app/releases/download/v1.0.0/app-release.apk)
+[Download APK](https://github.com/FahadMehmood056/fitness_app/releases/download/v2.0.0/app-release.apk)
 
 ---
 
