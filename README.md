@@ -6,7 +6,17 @@ A modern fitness tracking mobile application built with Flutter, implementing Cl
 
 ## App Screenshots
 
-[View Screenshots](https://github.com/FahadMehmood056/fitness_app/tree/master/screenshots)
+| Nutrition                               | Calendar                              | Plan                          |
+| --------------------------------------- | ------------------------------------- | ----------------------------- |
+| ![Nutrition](screenshots/nutrition.png) | ![Calendar](screenshots/calendar.png) | ![Plan](screenshots/plan.png) |
+
+| Plan Updated                                  | Plan Saved                                | Calm Mood                               |
+| --------------------------------------------- | ----------------------------------------- | --------------------------------------- |
+| ![Plan Updated](screenshots/plan-updated.png) | ![Plan Saved](screenshots/plan_saved.png) | ![Calm Mood](screenshots/calm_mood.png) |
+
+| Content Mood                             | Happy Mood                           | Peaceful Mood                              | Mood Saved                           |
+| ---------------------------------------- | ------------------------------------ | ------------------------------------------ | ------------------------------------ |
+| ![Content](screenshots/content_mood.png) | ![Happy](screenshots/happy_mood.png) | ![Peaceful](screenshots/peaceful_mood.png) | ![Saved](screenshots/mood_saved.png) |
 
 ---
 
