@@ -39,6 +39,7 @@ class WaterChartWidget extends StatelessWidget {
           ),
           Expanded(
             child: Stack(
+              clipBehavior: Clip.none,
               children: [
                 Positioned(
                   left: 0,
@@ -46,7 +47,6 @@ class WaterChartWidget extends StatelessWidget {
                   bottom: 6,
                   child: Container(height: 1, color: Color(0xFF363638)),
                 ),
-
                 Positioned(
                   right: 0,
                   bottom: -5,

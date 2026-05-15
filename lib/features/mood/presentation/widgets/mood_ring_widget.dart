@@ -69,35 +69,76 @@ class MoodRingWidget extends StatelessWidget {
   }
 }
 
-class _DraggableDotWidget extends StatelessWidget {
+class _DraggableDotWidget extends StatefulWidget {
   final MoodLoaded state;
 
-  static const double _ringRadius = 122.0;
-  static const double _dotSize = 60.0;
-  static const double _center = 140.0;
+  static const double ringRadius = 122.0;
+  static const double dotSize = 60.0;
+  static const double center = 140.0;
 
   const _DraggableDotWidget({required this.state});
 
   @override
+  State<_DraggableDotWidget> createState() => _DraggableDotWidgetState();
+}
+
+class _DraggableDotWidgetState extends State<_DraggableDotWidget> {
+  late double _angle;
+
+  DateTime _lastBlocUpdate = DateTime.now();
+
+  @override
+  void initState() {
+    super.initState();
+    _angle = widget.state.currentAngle;
+  }
+
+  @override
+  void didUpdateWidget(_DraggableDotWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.state.selectedMood != widget.state.selectedMood) {
+      setState(() {
+        _angle = widget.state.currentAngle;
+      });
+    }
+  }
+
+  void _onPanUpdate(DragUpdateDetails details) {
+    final double x = _DraggableDotWidget.ringRadius * cos(_angle);
+    final double y = _DraggableDotWidget.ringRadius * sin(_angle);
+
+    final double newX = x + details.delta.dx;
+    final double newY = y + details.delta.dy;
+    final double newAngle = atan2(newY, newX);
+
+    setState(() => _angle = newAngle);
+
+    final now = DateTime.now();
+    if (now.difference(_lastBlocUpdate).inMilliseconds > 100) {
+      _lastBlocUpdate = now;
+      context.read<MoodBloc>().add(UpdateDotAngle(newAngle));
+    }
+  }
+
+  void _onPanEnd(DragEndDetails details) {
+    context.read<MoodBloc>().add(UpdateDotAngle(_angle));
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final double angle = state.currentAngle;
-    final double x = _ringRadius * cos(angle);
-    final double y = _ringRadius * sin(angle);
+    final double x = _DraggableDotWidget.ringRadius * cos(_angle);
+    final double y = _DraggableDotWidget.ringRadius * sin(_angle);
 
     return Positioned(
-      left: _center + x - _dotSize / 2,
-      top: _center + y - _dotSize / 2,
+      left: _DraggableDotWidget.center + x - _DraggableDotWidget.dotSize / 2,
+      top: _DraggableDotWidget.center + y - _DraggableDotWidget.dotSize / 2,
       child: GestureDetector(
-        onPanUpdate: (details) {
-          final double newX = x + details.delta.dx;
-          final double newY = y + details.delta.dy;
-          final double newAngle = atan2(newY, newX);
-          context.read<MoodBloc>().add(UpdateDotAngle(newAngle));
-        },
+        onPanUpdate: _onPanUpdate,
+        onPanEnd: _onPanEnd,
         child: Container(
-          width: _dotSize,
-          height: _dotSize,
-          decoration: BoxDecoration(
+          width: _DraggableDotWidget.dotSize,
+          height: _DraggableDotWidget.dotSize,
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.white,
           ),

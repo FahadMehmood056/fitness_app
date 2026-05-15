@@ -13,6 +13,7 @@ class WeightCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 160,
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: AppColors.cardBg,
