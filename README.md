@@ -6,17 +6,17 @@ A modern fitness tracking mobile application built with Flutter, implementing Cl
 
 ## App Screenshots
 
-| Nutrition                               | Calendar                              | Plan                          |
-| --------------------------------------- | ------------------------------------- | ----------------------------- |
-| ![Nutrition](screenshots/nutrition.png) | ![Calendar](screenshots/calendar.png) | ![Plan](screenshots/plan.png) |
+| Nutrition                                          | Calendar                                          | Plan                                          |
+| -------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- |
+| <img src="screenshots/nutrition.png" width="200"/> | <img src="screenshots/calendar.png" width="200"/> | <img src="screenshots/plan.png" width="200"/> |
 
-| Plan Updated                                  | Plan Saved                                | Calm Mood                               |
-| --------------------------------------------- | ----------------------------------------- | --------------------------------------- |
-| ![Plan Updated](screenshots/plan-updated.png) | ![Plan Saved](screenshots/plan_saved.png) | ![Calm Mood](screenshots/calm_mood.png) |
+| Plan Updated                                          | Plan Saved                                          | Calm Mood                                          |
+| ----------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------- |
+| <img src="screenshots/plan-updated.png" width="200"/> | <img src="screenshots/plan_saved.png" width="200"/> | <img src="screenshots/calm_mood.png" width="200"/> |
 
-| Content Mood                             | Happy Mood                           | Peaceful Mood                              | Mood Saved                           |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------ | ------------------------------------ |
-| ![Content](screenshots/content_mood.png) | ![Happy](screenshots/happy_mood.png) | ![Peaceful](screenshots/peaceful_mood.png) | ![Saved](screenshots/mood_saved.png) |
+| Content Mood                                          | Happy Mood                                          | Peaceful Mood                                          | Mood Saved                                          |
+| ----------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------- |
+| <img src="screenshots/content_mood.png" width="200"/> | <img src="screenshots/happy_mood.png" width="200"/> | <img src="screenshots/peaceful_mood.png" width="200"/> | <img src="screenshots/mood_saved.png" width="200"/> |
 
 ---
 
