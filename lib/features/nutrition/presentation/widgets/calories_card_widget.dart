@@ -11,7 +11,7 @@ class CaloriesCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
+      height: 165,
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: AppColors.cardBg,

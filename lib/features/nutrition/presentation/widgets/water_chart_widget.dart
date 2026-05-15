@@ -49,7 +49,7 @@ class WaterChartWidget extends StatelessWidget {
                 ),
                 Positioned(
                   right: 0,
-                  bottom: -5,
+                  bottom: -1,
                   child: Text(
                     '0ml',
                     style: AppTextStyles.body.copyWith(
